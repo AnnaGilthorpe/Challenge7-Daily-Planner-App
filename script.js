@@ -24,12 +24,16 @@ if (currentHour < 9) {
 if (currentHour === 9) {
     $("textarea").addClass("present")
 }
+localStorage.setItem("9am", "something")
+$("textarea").text(localStorage.getItem("9am"))
+}
 
-};}
-// localStorage.setItem("900", "something")
-// $("textarea").text(localStorage.getItem("900"))
-// $("textarea").addClass("future")
+$("button").on("click", function(event){
+    $("saveBtn").setClass("fas fa-sync fa-spin")
+    console.log($(event.target).siblings("textarea").val());
+    console.log($(event.target).attr("data-time"));
 
+})
 //10am
 
 
