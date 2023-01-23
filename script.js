@@ -15,6 +15,8 @@ console.log(dayWeek);
 
 
 
+
+
 $(document).ready(function () {
     $('.saveBtn').on('click', function () {
       let value = $(this).siblings('.work-description').val()
@@ -25,22 +27,24 @@ $(document).ready(function () {
 
     function updateHours() {
         let currentHour = moment().hour();
+        console.log(currentHour)
         
-        $('.time-area').each(function () {
+        $('.time-area').each(function() {
             let currentBlockTime = parseInt($(this).attr('id').split('-')[0])
             
             if (currentBlockTime < currentHour) {
-                $(this).addClass('past')
+                $(this).addClass('past');
             } else if (currentBlockTime === currentHour) {
                 $(this).removeClass('past')
-                $(this).addClass('present')
-            } else {
-                $(this).removeClass('past')
+                $(this).addClass('present');
+             } else (currentBlockTime > currentHour) {
+                 $(this).removeClass('past')
                 $(this).removeClass('present')
-                $(this).removeClass('future')
-            }
-        })
-    }
+                $(this).Class('future');
+             }}   
+
+
+        )
 
     updateHours()
     setInterval(updateHours, 540000)
@@ -48,11 +52,8 @@ $(document).ready(function () {
 
     // bug, work out why local storage isnt dispalying after refresh
 
-    // TODO: finish this section for every hour, ensure you have id with time
-    // on each parent eg: '11-am'
-    /// and class of work descriotion on each text area
+    // TODO: 
+   
     $('#9-am .work-description').val(localStorage.getItem('9-am'))
     $('#10-am .work-description').val(localStorage.getItem('10-am'))
-    // dispaly the current day and time on page 
-    // look up how to do this on moment
-})
+    }})
