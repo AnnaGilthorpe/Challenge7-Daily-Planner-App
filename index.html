@@ -31,12 +31,27 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <div class="row">
-        <h1>9am</h1>
-      <textarea  
-      class="col-8" data-time="9am"></textarea>
-      <button class="saveBtn" class="saveBtn i:hover" data-time="9am"><i class="fas fa-sync"></i></button>
-    </div>
+      <div id="9-am" class="row time-area">
+        <h1 class = "col-2">9am</h1>
+        <textarea class="col-8 work-description"></textarea>
+        <button class="saveBtn col-1 fas fa-sync" class="saveBtn i:hover" data-time="9am"></button>
+      </div>
+      <div id="10-am" class="row time-area">
+        <h1 class = "col-2">10am</h1>
+        <textarea class="col-8 work-description"></textarea>
+        <button class="saveBtn col-1" class="saveBtn i:hover" data-time="9am"><i class="fas fa-sync"></i></button>
+      </div>
+      <div class="row time-area">
+        <h1 class = "col-2">11am</h1>
+        <textarea class="col-8" data-time="10am"></textarea>
+        <button class="saveBtn col-1" class="saveBtn i:hover" data-time="9am"><i class="fas fa-sync"></i></button>
+      </div>
+  
+      <div id="12-pm"class="row time-area">
+        <h1 class = "col-2">12pm</h1>
+        <textarea class="col-8" ></textarea>
+        <button class="saveBtn col-1" class="saveBtn i:hover" data-time="9am"><i class="fas fa-sync"></i></button>
+      </div>
       <!-- Timeblocks go here -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
