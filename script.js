@@ -1,22 +1,11 @@
-// let currentDay = document.querySelector('#currentDay');
-// let today = moment();
-// console.log(m.toString());
-// console.log("hello world");
-
+// Using moement to enter today's date at the top of that page
 var today = moment();
 let dayWeek = today.format("[Happy] dddd Do MMMM[!]")
 $("#currentDay").text(dayWeek);
 console.log(dayWeek);
 
-// let currentHour = today.format("H")
-// console.log(currentHour)
 
-// let dataTime = document.querySelector('#data-time');
-
-
-
-
-
+//On click  that sets items - current time and value that is entered into the text area
 $(document).ready(function () {
     $('.saveBtn').on('click', function () {
       let value = $(this).siblings('.work-description').val()
@@ -25,6 +14,7 @@ $(document).ready(function () {
       localStorage.setItem(time, JSON.stringify(value))
     })
 
+//update hours function
     function updateHours() {
         let currentHour = moment().hour();
         console.log(currentHour)
@@ -45,14 +35,14 @@ $(document).ready(function () {
 
 
         )
-
+//getting the page to update every 9mins
     updateHours()
     setInterval(updateHours, 540000)
 
 
     // bug, work out why local storage isnt dispalying after refresh
 
-    // TODO: 
+   
    
     $('#9-am .work-description').val(localStorage.getItem('9-am'))
     $('#10-am .work-description').val(localStorage.getItem('10-am'))
