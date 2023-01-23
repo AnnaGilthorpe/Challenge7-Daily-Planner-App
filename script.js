@@ -3,17 +3,15 @@
 // console.log(m.toString());
 // console.log("hello world");
 
-// var today = moment();
-// let dayWeek = today.format("[Happy] dddd[!]")
-// $("#currentDay").text(dayWeek);
-// console.log(dayWeek);
+var today = moment();
+let dayWeek = today.format("[Happy] dddd Do MMMM[!]")
+$("#currentDay").text(dayWeek);
+console.log(dayWeek);
 
 // let currentHour = today.format("H")
 // console.log(currentHour)
 
 // let dataTime = document.querySelector('#data-time');
-
-
 
 
 
@@ -45,7 +43,6 @@ $(document).ready(function () {
     }
 
     updateHours()
-
     setInterval(updateHours, 540000)
 
 
