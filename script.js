@@ -42,10 +42,15 @@ $(document).ready(function () {
     setInterval(updateHours, 540000)
 
 
-    // bug, work out why local storage isnt dispalying after refresh
+   
 
-
-
-    $('#9-am .work-description').val(localStorage.getItem('9-am'))
-    $('#10-am .work-description').val(localStorage.getItem('10-am'))
+    $('#9 .work-description').val(localStorage.getItem('9'))
+    $('#10 .work-description').val(localStorage.getItem('10'))
+    $('#11 .work-description').val(localStorage.getItem('11'))
+    $('#12 .work-description').val(localStorage.getItem('12'))
+    $('#13 .work-description').val(localStorage.getItem('13'))
+    $('#14 .work-description').val(localStorage.getItem('14'))
+    $('#15 .work-description').val(localStorage.getItem('15'))
+    $('#16 .work-description').val(localStorage.getItem('16'))
+    $('#17 .work-description').val(localStorage.getItem('17'))
 })
