@@ -19,6 +19,8 @@ The finer details of what I have learnt include:-
   <li> Adding and removing classes </li>
   <li> Using onclick events </li>
   <li> Creating a user friendly interface <li/>
+ 
+ 
 
 Technologies used:- MAC Terminal, VS Code and Git Hub.
 
