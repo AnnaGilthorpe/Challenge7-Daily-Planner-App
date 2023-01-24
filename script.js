@@ -20,7 +20,7 @@ $(document).ready(function () {
         console.log(currentHour)
 
         $('.time-area').each(function () {
-            let currentBlockTime = parseInt($(this).attr('id').split('-')[0])
+            let currentBlockTime = parseInt($(this).attr('id'))
             console.log(currentBlockTime)
             if (currentBlockTime < currentHour) {
                 $(this).addClass('past');
